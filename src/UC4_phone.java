@@ -5,9 +5,7 @@ import java.util.regex.Pattern;
 public class UC4_phone {
     public static boolean validatePhonenumber(String phone) {
 
-        //\+\d(-\d{3}){2}-\d{4}
-
-        String regx = "^(0/91)?[7-9][0-9]{9}$";
+        String regx = "^(0/91)\\d[7-9][0-9]{9}$";
         Pattern pattern = Pattern.compile(regx);
         Matcher matcher = pattern.matcher(phone);
 
