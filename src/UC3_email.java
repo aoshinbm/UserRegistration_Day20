@@ -5,11 +5,6 @@ import java.util.regex.Pattern;
 public class UC3_email {
     public static boolean validateEmail(String email) {
 
-//        "^[a-zA-Z0-9_+&*-]+(?:\\."+
-  //              "[a-zA-Z0-9_+&*-]+)*@" +
-    //            "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
-      //          "A-Z]{2,7}$";
-
 String regx = "^[a-zA-Z0-9_+*&.-]+(?:\\.[a-zA-Z0-9_+*.-]+)*@(?:[a-zA-Z0-9._-]+)*.(?:[a-zA-Z0-9]+)*.[a-zA-Z]{2,10}$";
         Pattern pattern = Pattern.compile(regx,Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(email);
