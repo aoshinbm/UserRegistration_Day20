@@ -2,10 +2,11 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class UC5_password1 {
+public class UC_password {
     public static boolean validatePassword(String password) {
 
-        String regx = "^[A-Za-z]{8,25}$";
+        //
+        String regx = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$";
         Pattern pattern = Pattern.compile(regx);
         Matcher matcher = pattern.matcher(password);
 
@@ -15,11 +16,9 @@ public class UC5_password1 {
         else {
             return false;
         }
-
     }
-
     public static void main(String[] args) {
-        System.out.println("Paassword validation");
+        System.out.println("Password validation");
         System.out.println("Enter password: ");
         Scanner sc = new Scanner(System.in);
         String password = sc.nextLine();
