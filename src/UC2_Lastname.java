@@ -19,7 +19,7 @@ public class UC2_Lastname {
     }
 
     public static void main(String[] args) {
-        System.out.println("First name validation");
+        System.out.println("Last name validation");
         System.out.println("Enter last name: ");
         Scanner sc = new Scanner(System.in);
         String lastName = sc.nextLine();
